@@ -1,5 +1,6 @@
 "use client"
 
+import QuestionSection from "./QuestionSection"
 
 export default function QuestionPosts() {
 
@@ -11,7 +12,8 @@ export default function QuestionPosts() {
                     <p className="text-[13px] text-[#C8CCD0]">Based on your viewing history and watched tags.</p>
                 </div>
             </div>
-            <div className='flex'>
+            <div className='flex lg:w-[60%]'>
+                <QuestionSection />
             </div>
         </section>
     )

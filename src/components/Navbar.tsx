@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <div className="bg-[#252627] border-b border-[#494d50] sticky top-0 left-0 right-0 z-50 ">
-            <div className="flex items-center justify-between h-16 px-20 py-4">
+            <div className="flex items-center justify-between h-16 px-5 md:px-20 py-4">
                 <Link href="/">
                     <Image src={stackoverflow} alt="logo" width={140} height={140} priority/>
                 </Link>
