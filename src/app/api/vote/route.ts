@@ -69,5 +69,23 @@ export async function POST(req: NextRequest) {
             }
         });
     })
+}
 
+export async function GET(req: NextRequest) {
+
+    return apiHandler(async () => {
+        const { searchParams } = new URL(req.url);
+        const questionId  = searchParams.get("questionId");
+
+        const question = await databases.listDocuments(db, voteCollection,[
+            Query.equal("type", "question"),
+            Query.equal("typeId", questionId!),
+            Query.limit(1),
+        ]);
+
+        return NextResponse.json({
+            status: 200,
+            data: question,
+        });
+    })
 }

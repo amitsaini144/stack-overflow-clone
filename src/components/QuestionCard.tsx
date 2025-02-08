@@ -1,6 +1,8 @@
+import { Question } from "@/store/Question";
 
+export default function QuestionCard({ title, content, tags }: Question) {
 
-export default function QuestionCard() {
+    
 
     return (
         <div className="flex p-4 gap-6 border-b border-[#494d50]">
@@ -19,9 +21,9 @@ export default function QuestionCard() {
                 </div>
             </div>
             <div>
-                <h1 className="text-2xl font-bold text-[#90C4F9]">How to use the R programming language?</h1>
-                <p >How to use the R programming language to perform statistical analysis?</p>
-                <div>c# | c++ | java | javascript | python | ruby | swift | typescript</div>
+                <h1 className="text-2xl font-bold text-[#90C4F9]">{title}</h1>
+                <p >{content}</p>
+                <div>{tags.join(" | ")}</div>
             </div>
         </div>
     )
